@@ -26,5 +26,5 @@ FirstApp.propTypes ={
 FirstApp.defaultProps = {
     name: "Victor",
     title: "Hola RTP",
-    subTitle: 123
+    subTitle: 123456789
 }
