@@ -14,8 +14,9 @@ import './index.css'
 // import { CounterWithCustomHook } from './01-useState/CounterWithCustomHook'
 // import { Padre } from './07-tarea-memo/Padre'
 // import './08-useReducer/intro-reducer';
-import {TodoApp} from './08-useReducer/TodoApp'
-// import { MainApp } from './09-useContext/MainApp'
+// import {TodoApp} from './08-useReducer/TodoApp'
+import { BrowserRouter } from "react-router-dom";
+import { MainApp } from './09-useContext/MainApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
@@ -30,8 +31,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     // <MemoHook/>
     // <CallbackHook/>
     // <Padre/>
-    <TodoApp/>
-    // <MainApp/>
-  // </React.StrictMode>
+    // <TodoApp/>
+    // </React.StrictMode>
+    <BrowserRouter>
+    <MainApp/>
+    </BrowserRouter>
+    
 )
 
