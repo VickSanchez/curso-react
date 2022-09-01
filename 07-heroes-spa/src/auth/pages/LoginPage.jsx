@@ -1,10 +1,21 @@
-import { useNavigate } from "react-router-dom";
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
+
 export const LoginPage = () => {
 
-  const navigate = useNavigate();
+  const { login } = useContext( AuthContext ); // de Aqui se extrae el login del contexto
+
+  const navigate = useNavigate(); // Aqui se establece el useNavigate para navegar a otra ruta llamando la función}
+  
 
   const onLogin = () => {
-    navigate('/marvel', {replace: true});
+    
+    navigate('/', {
+      replace: true
+    });
+    login('Vick Sanchez');
+
   }
 
   return (
@@ -18,5 +29,5 @@ export const LoginPage = () => {
         Login
       </button>
     </div>
-  )
+  );
 }
