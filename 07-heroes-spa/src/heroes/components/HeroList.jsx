@@ -1,16 +1,25 @@
 import { getHeroesByPublisher } from "../helpers"
+import PropTypes from 'prop-types';
+import { HeroCard } from "./";
+import { useMemo } from "react";
 
 export const HeroList = ({ publisher }) => {
 
-    const heroes = getHeroesByPublisher( publisher );
+    const heroes = useMemo( () => getHeroesByPublisher( publisher ), [ publisher ]) ;
 
   return (
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    <div className="row rows-cols-1 row-cols-md-3 g-3">
+      {
+        heroes.map( hero => (
+          <HeroCard key={hero.id } 
+                    {...hero}
+          />
+        ))
+      }
+    </div>
   )
+}
+
+HeroList.proptypes = {
+    publisher: PropTypes.string.isRequire
 }
