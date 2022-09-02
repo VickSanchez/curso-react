@@ -7,7 +7,7 @@ import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter forceRefresh={true}>
+    <BrowserRouter>
       <HeroesApp />
     </BrowserRouter>
   </React.StrictMode>
