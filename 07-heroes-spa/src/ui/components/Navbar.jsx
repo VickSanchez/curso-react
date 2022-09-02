@@ -1,17 +1,22 @@
+import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../auth/context/AuthContext";
 
 export const Navbar = () => {
+
+  const { user, logout } = useContext( AuthContext )
 
   const navigate = useNavigate();
 
   const onLogOut = () =>{
+    logout();
     navigate('/login', {replace: true});
   }
 
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
       <Link className="navbar-brand" to="/">
-        Asociaciones
+        Comics
       </Link>
 
       <div className="navbar-collapse">
@@ -36,7 +41,7 @@ export const Navbar = () => {
             Logout
           </NavLink> */}
           <span className="nav-item nav-link text-primary">
-            Vick
+            {user?.name}
           </span>
 
           <button className="nav-item nav-link btn border" onClick={ onLogOut }>
