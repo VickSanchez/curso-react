@@ -6,9 +6,8 @@ export const LoginPage = () => {
 
   const { login } = useContext( AuthContext ); // de Aqui se extrae el login del contexto
 
-  const navigate = useNavigate(); // Aqui se establece el useNavigate para navegar a otra ruta llamando la función}
+  const navigate = useNavigate(); // Aqui se establece el useNavigate para navegar a otra ruta llamando la función
   
-
   const onLogin = () => {
 
     const lastPath = localStorage.getItem('lastPath') || '/';
@@ -18,6 +17,7 @@ export const LoginPage = () => {
     navigate( lastPath, {
       replace: true
     }); 
+    
 
 
   }

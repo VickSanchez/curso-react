@@ -4,9 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import { HeroesApp } from './HeroesApp';
 import './styles.css';
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter forceRefresh={true}>
       <HeroesApp />
     </BrowserRouter>
   </React.StrictMode>
