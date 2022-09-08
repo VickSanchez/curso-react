@@ -4,7 +4,7 @@ import {Input} from "./components/Input";
 import { TecladoApp } from "./components/Teclado";
 import { CalcContext } from "./context/CalcContext";
 
-export const AppCalculadoraCopy = () => {
+export const AppCalculadora = () => {
 
   const {text, result} = useContext(CalcContext)
 
