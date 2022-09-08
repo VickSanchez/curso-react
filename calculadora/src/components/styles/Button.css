@@ -27,9 +27,13 @@
 
 }
 
-div.button-wrapper:hover {
-  transform: scale(0.9);
-  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+div.button-wrapper {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+div.button-wrapper:active{
+  box-shadow:  -6px 6px 13px #a6a6a6,
+  6px -6px 13px #ffffff;
   transition: transform 0.3s;
+  transform: scale(0.9);
 }

@@ -6,6 +6,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
+
 }
 
 .calc-wrapper {
@@ -13,6 +15,9 @@ body {
   width: 400px;
   border-radius: 5px;
   margin-top: 30px;
+  background: #fffac2;
+  box-shadow:  -10px 10px 20px #b8b48c;
+  padding: 15px;             
 }
 
 .row {
@@ -31,4 +36,6 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, auto);
   justify-content: space-around;
+  
 }
+

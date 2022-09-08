@@ -8,7 +8,6 @@ export const AppCalculadora = () => {
 
   const {text, result} = useContext(CalcContext)
 
-
   return (
 
     <div className="App mt-3em">

@@ -14,9 +14,9 @@ export const Calcprovider = ({children}) => {
     };
 
     const calculateResult = (texto) => {
-        const operacion = math.evaluate(texto);
+        const operacion = math.evaluate(texto);  //.toFixed(4)
 
-        setResult(operacion);
+        ( operacion%1 !== 0 ) ? setResult(operacion.toFixed(4)) : setResult(operacion)
     };
 
     const resetInput = () => {
