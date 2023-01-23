@@ -14,11 +14,11 @@ export const breakingSlice = createSlice({
         setCharacters: ( state, action ) => {
             state.isLoading= false;
             state.page = action.payload.page;
-            state.characters = action.payload.characters
+            state.characters = action.payload.characters;
         }
     }
 });
 
 
 // Action creators are generated for each case reducer function
-export const { startLoadingCharacters, setCharacters } = breakingSlice.actions;
+export const { startLoadingCharacters, setCharacters } = breakingSlice.actions; 

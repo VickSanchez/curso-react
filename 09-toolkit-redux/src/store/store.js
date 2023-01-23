@@ -1,9 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { counterSlice } from './slices/counter';
-import { marvelSlice } from './slices/marvel/marvelSlice';
+import { todosApi } from './apis';
+import { breakingSlice, counterSlice } from './slices';
+
 export const store = configureStore({
   reducer: {
     counter: counterSlice.reducer,
-    heroes: marvelSlice.reducer,
+    breaking: breakingSlice.reducer,
+
+    [todosApi.reducerPath] : todosApi.reducer,
   },
-})
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat( todosApi.middleware )
+}) 
